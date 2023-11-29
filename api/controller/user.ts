@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import { userValidation } from '../validation/user';
 import { userService } from '../services/user';
-import { RedisService } from '../services/redis';
 import { ResponseService } from '../services/response';
 
 
