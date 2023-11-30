@@ -31,6 +31,6 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.use('/user', limiter, user)
-app.use('/team', limiter, product)
+app.use('/product', limiter, product)
 
 export default app
