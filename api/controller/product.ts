@@ -28,7 +28,7 @@ export const productController = {
 
   async viewProduct(req: Request, res: Response): Promise<{}> {
     const { code } = req.params
-    const Product = await ProductService.getProduct(code)
+    const Product = await productService.getProduct(code)
     const { _id, ...data } = Product.toObject()
     return ResponseService.success(res, 'Product Successfully Retrieved', data)
   },
