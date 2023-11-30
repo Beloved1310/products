@@ -8,7 +8,7 @@ interface IProduct extends Document {
   quantity: number;
 }
 
-const ProductSchema: Schema<IProduct> = new Schema(
+const ProductSchema: Schema = new Schema(
   {
     image: {
       type: String,
@@ -28,7 +28,4 @@ const ProductSchema: Schema<IProduct> = new Schema(
   },
   { timestamps: true }
 );
-
-const Product = mongoose.model<IProduct>('Product', ProductSchema);
-
-export default Product;
+export default  mongoose.model('Product', ProductSchema);

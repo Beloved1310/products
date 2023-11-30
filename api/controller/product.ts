@@ -8,7 +8,7 @@ export const productController = {
   async createProduct(req: Request, res: Response): Promise<{}> {
     const { value, error } = productValidation.create.validate(req.body)
     if (error) return res.status(400).send({ error: error.details[0].message })
-    const data: ProductInput = await productService.createProduct(value)
+    const data = await productService.createProduct(value)
     return ResponseService.success(res, 'Product Successfully Created', data)
   },
 
