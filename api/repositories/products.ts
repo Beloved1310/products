@@ -19,7 +19,7 @@ export const productRepository = {
         },
       },
     )
-    return Product
+    return product
   },
 
   async deleteProduct(code: string) {
